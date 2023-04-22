@@ -1,18 +1,11 @@
-## Getting Started
+## Task 1
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+In the solution presented here I assume that the data structure to be implemented is a binary tree.
 
 ## Folder Structure
 
-The workspace contains two folders by default, where:
+The workspace contains three folders:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- `bin`: the folder with compiled output files
+- `lib`: the folder conntaining .jar file from the JUnit testing framework
+- `src`: the folder maintaining the source code, `App.java` file implements the solution, tests are in the `AppTest.java` file
