@@ -1,4 +1,4 @@
-## Task 1
+# Task 1
 
 In the solution presented here I assume that the data structure to be implemented is a binary tree.
 
