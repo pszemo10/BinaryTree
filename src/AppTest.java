@@ -40,13 +40,28 @@ class AppTest {
     }
 
     @Test
-    void heightOfSubtree(){
+    void heightOfSubtree1(){
         var node=new Node(7);
         var right=new Node(8);
         var rright=new Node(2);
         node.addRightChild(right);
         right.addRightChild(rright);
 
-        a
+        assertEquals(1,rright.height());
+        assertEquals(2,right.height());
+        assertEquals(3,node.height());
+    }
+
+    @Test
+    void heightOfSubtree2(){
+        var node=new Node(7);
+        var left=new Node(8);
+        var right=new Node(2);
+        node.addLeftChild(left);
+        node.addRightChild(right);
+
+        assertEquals(1,right.height());
+        assertEquals(1,left.height());
+        assertEquals(2,node.height());
     }
 }
