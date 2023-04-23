@@ -31,10 +31,22 @@ class AppTest {
         var rright=new Node(2);
         node.addRightChild(right);
         right.addRightChild(rright);
+
         assertEquals(7,node.value);
         assertEquals(8,node.rightChild.value);
         assertEquals(null,node.rightChild.leftChild);
         assertEquals(2,node.rightChild.rightChild.value);
         assertEquals(null,node.rightChild.rightChild.rightChild);
+    }
+
+    @Test
+    void heightOfSubtree(){
+        var node=new Node(7);
+        var right=new Node(8);
+        var rright=new Node(2);
+        node.addRightChild(right);
+        right.addRightChild(rright);
+
+        a
     }
 }
