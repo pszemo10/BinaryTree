@@ -25,16 +25,24 @@ class Node{
     }
 
     public int height(){
+
+        //this method recursively computes the height
+        //of the subtree rooted in the node
+
         if (leftChild==null && rightChild==null)
             return 1;
 
-        int leftHeight=leftChild==null ? 0 : leftChild.height();
-        int rightHeight=rightChild==null ? 0 : rightChild.height();
+        int leftHeight= leftChild==null ? 0 : leftChild.height();
+        int rightHeight= rightChild==null ? 0 : rightChild.height();
 
         return Math.max(leftHeight,rightHeight)+1;
     }
 
     public int leaves(){
+
+        //this method recursively computes the number of leaves
+        //in the subtree rooted in the node
+
         if (leftChild==null && rightChild==null)
             return 1;
 
@@ -50,13 +58,27 @@ class Node{
 class Tree{
 
     //This class represents the entire tree
+
+    private Node root;
+
+    Tree(Node r){
+        root=r;
+    }
+
+    public int height(){
+        return root.height();
+    }
+
+    public int leaves(){
+        return root.leaves();
+    }
     
 }
 
 public class App {
 
     
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
         
     }
 }

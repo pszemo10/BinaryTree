@@ -90,4 +90,28 @@ class AppTest {
         assertEquals(1,left.leaves());
         assertEquals(2,node.leaves());
     }
+
+    @Test
+    void treeHeight(){
+        var node=new Node(7);
+        var left=new Node(8);
+        var right=new Node(2);
+        node.addLeftChild(left);
+        node.addRightChild(right);
+        Tree tree=new Tree(node);
+
+        assertEquals(2,tree.height());
+    }
+
+    @Test
+    void treeLeaves(){
+        var node=new Node(7);
+        var left=new Node(8);
+        var right=new Node(2);
+        node.addLeftChild(left);
+        node.addRightChild(right);
+        Tree tree=new Tree(node);
+
+        assertEquals(2,tree.leaves());
+    }
 }
