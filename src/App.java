@@ -25,7 +25,13 @@ class Node{
     }
 
     public int height(){
-        return 0;
+        if (leftChild==null && rightChild==null)
+            return 1;
+
+        int leftHeight=leftChild==null ? 0 : leftChild.height();
+        int rightHeight=rightChild==null ? 0 : rightChild.height();
+
+        return Math.max(leftHeight,rightHeight)+1;
     }
 
     public int leaves(){
