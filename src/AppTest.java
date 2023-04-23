@@ -5,11 +5,25 @@ import static org.junit.jupiter.api.Assertions.*;
 class AppTest {
     
     @Test
-    void nodeCreation(){
+    void nodeCreation1(){
         var node=new Node(5);
+
         assertEquals(5,node.value);
         assertEquals(null,node.leftChild);
         assertEquals(null,node.rightChild);
+    }
+
+    @Test
+    void nodeCreation2(){
+        var leftright=new Node(3);
+        var left=new Node(5,null,leftright);
+        var node=new Node(5,left,null);
+
+        assertEquals(5,node.value);
+        assertEquals(null,node.rightChild);
+        assertEquals(5,node.leftChild.value);
+        assertEquals(3,node.leftChild.rightChild.value);
+        assertEquals(null,node.leftChild.leftChild);
     }
 
     @Test
@@ -17,6 +31,7 @@ class AppTest {
         var node=new Node(7);
         var left=new Node(8);
         node.addLeftChild(left);
+
         assertEquals(7,node.value);
         assertEquals(null,node.rightChild);
         assertEquals(8,node.leftChild.value);

@@ -16,6 +16,16 @@ class Node{
         rightChild=null;
     }
 
+    public Node(int n,Node left, Node right){
+
+        //This constructor initializes node value with the given number
+        //Child references are set to the values passed
+        
+        value=n;
+        leftChild=left;
+        rightChild=right;
+    }
+
     public void addLeftChild(Node toAdd){
         leftChild=toAdd;
     }
@@ -79,6 +89,6 @@ public class App {
 
     
     public static void main(String[] args){
-        
+
     }
 }
