@@ -89,6 +89,14 @@ public class App {
 
     
     public static void main(String[] args){
+        Node rr=new Node(0,new Node(2),new Node(8,null,new Node(5)));
+        Node r=new Node(7,new Node(1),rr);
+        Node l=new Node(3,new Node(2),new Node(5));
+        Node rooot=new Node(5,l,r);
 
+        Tree tree=new Tree(rooot);
+
+        System.out.println("Height: "+tree.height());
+        System.out.println("Leaves: "+tree.leaves());
     }
 }
