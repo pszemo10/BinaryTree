@@ -35,7 +35,13 @@ class Node{
     }
 
     public int leaves(){
-        return 0;
+        if (leftChild==null && rightChild==null)
+            return 1;
+
+        int leftLeaves=leftChild==null ? 0 : leftChild.leaves();
+        int rightLeaves=rightChild==null ? 0 : rightChild.leaves();
+
+        return leftLeaves+rightLeaves;
     }
 
 
