@@ -64,4 +64,30 @@ class AppTest {
         assertEquals(1,left.height());
         assertEquals(2,node.height());
     }
+
+    @Test
+    void leavesOfSubtree1(){
+        var node=new Node(7);
+        var right=new Node(8);
+        var rright=new Node(2);
+        node.addRightChild(right);
+        right.addRightChild(rright);
+
+        assertEquals(1,rright.leaves());
+        assertEquals(1,right.leaves());
+        assertEquals(1,node.leaves());
+    }
+
+    @Test
+    void leavesOfSubtree2(){
+        var node=new Node(7);
+        var left=new Node(8);
+        var right=new Node(2);
+        node.addLeftChild(left);
+        node.addRightChild(right);
+
+        assertEquals(1,right.leaves());
+        assertEquals(1,left.leaves());
+        assertEquals(2,node.leaves());
+    }
 }

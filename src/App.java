@@ -24,6 +24,14 @@ class Node{
         rightChild=toAdd;
     }
 
+    public int height(){
+        return 0;
+    }
+
+    public int leaves(){
+        return 0;
+    }
+
 
 }
 
